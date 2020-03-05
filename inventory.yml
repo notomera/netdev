@@ -1,0 +1,14 @@
+---
+
+ - name: ONB config backup
+   generic_data:
+    username: 'omera'
+    password: 'arst0088'
+    device_type: 'cisco_xe'
+    secret: ''
+   devices:
+    - name: 'device_1'
+      ip_address: '192.168.3.101'
+      username: 'ahmedgaily'
+      password: 'arst0088'
+...
