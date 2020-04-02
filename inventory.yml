@@ -2,17 +2,13 @@
 
  - name: ONB config backup
    generic_data:
-    username: 'omera'
-    password: 'arst0088'
+    username: 'admin'
+    password: 'Syb3r2g0'
     device_type: 'cisco_ios'
     secret: ''
    devices:
     - name: 'device_1'
-      ip_address: '192.168.3.101'
-      username: 'ahmedgaily'
-      password: 'arst0088'
+      ip_address: '192.168.133.11'
     - name: 'device_2'
-      ip_address: '192.168.3.100'
-      username: 'ahmedgaily'
-      password: 'arst0088'
+      ip_address: '192.168.133.12'
 ...

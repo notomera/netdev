@@ -35,8 +35,8 @@ async def device_connection(connect_param, conf_type = 'command'):
     await dev_connect.connect()    
     commands = j2_command()
     output = [f'\n\n\n\n\n##########################  {ip_address} ##########################\n\n\n\n\n']
-    if conf_type == 'config':
-        command_result = await dev_connect.send_command(commands)
+    if conf_type == 'ios_config':
+        command_result = await dev_connect.send_config_set(commands)
         return command_result
     else:
         for command in commands:
@@ -87,7 +87,7 @@ if __name__ == '__main__':
     device_data = dev_data()
     loop = asyncio.get_event_loop()
     tasks = [
-        loop.create_task(device_connection(dev)) 
+        loop.create_task(device_connection(dev, conf_type='ios_config')) 
         for dev in device_data
     ]
     loop.run_until_complete(asyncio.wait(tasks))
